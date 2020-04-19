@@ -23,7 +23,7 @@ i=findViewById(R.id.issue);
 i.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
-        Intent i = new Intent(Book.this,MainActivity.class);
+        Intent i = new Intent(Book.this,home.class);
         startActivity(i);
     }
 });

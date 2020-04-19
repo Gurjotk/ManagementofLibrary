@@ -21,14 +21,14 @@ Button ret, iagain;
         iagain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(Return.this,MainActivity.class);
+                Intent i = new Intent(Return.this,home.class);
                 startActivity(i);
             }
         });
         ret.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(Return.this,MainActivity.class);
+                Intent i = new Intent(Return.this,home.class);
                 startActivity(i);
             }
         });
