@@ -63,10 +63,10 @@ public class Network {
                 }
             }
 
-            private String getPostDataString(HashMap<String, String> map)  throws UnsupportedEncodingException {
+            private String getPostDataString(HashMap<String, String> map) throws UnsupportedEncodingException {
                 StringBuilder sb = new StringBuilder();
                 boolean first = true;
-                for(Map.Entry<String, String> entry : map.entrySet()){
+                for (Map.Entry<String, String> entry : map.entrySet()) {
                     if (first)
                         first = false;
                     else
@@ -84,6 +84,6 @@ public class Network {
         });
         th.start();
 
-
+    }
 
     }
