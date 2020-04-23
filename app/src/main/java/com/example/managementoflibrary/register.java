@@ -42,7 +42,6 @@ Button reg;
         retrofitInterface = retrofit.create(RetrofitInterface.class);
         name = findViewById(R.id.reg_name);
         email = findViewById(R.id.reg_user_name);
-        mobile = findViewById(R.id.reg_mob);
         pass = findViewById(R.id.reg_password);
         repass = findViewById(R.id.reg_con_password);
         reg = findViewById(R.id.bn_reg);
