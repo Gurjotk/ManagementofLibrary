@@ -27,4 +27,12 @@ dependencies {
     androidTestImplementation 'androidx.test:runner:1.1.1'
     implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.15'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+
+
+
+    //Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+
+    implementation 'com.android.support:multidex:1.0.3'
 }

@@ -9,16 +9,27 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.HashMap;
+
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+
 public class MainActivity extends AppCompatActivity {
     Button login_button;
     Button b10;
 
     EditText UserName, Password;
     String username, password;
+    private Retrofit retrofit;
+    private RetrofitInterface retrofitInterface;
+
+    private String BASE_URL = "http://192.168.2.20:3033";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        retrofit = new Retrofit.Builder().baseUrl(BASE_URL).addConverterFactory(GsonConverterFactory.create()).build();
+        retrofitInterface = retrofit.create(RetrofitInterface.class);
         login_button = (Button) findViewById(R.id.bn_login);
         b10=(Button)findViewById(R.id.button10);
 
@@ -30,6 +41,10 @@ public class MainActivity extends AppCompatActivity {
         login_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                final HashMap<String, String> map = new HashMap<>();
+
+                map.put("Username", UserName.getText().toString());
+                map.put("password", Password.getText().toString());
                 Intent i = new Intent(MainActivity.this, home.class);
                 startActivity(i);
             }
