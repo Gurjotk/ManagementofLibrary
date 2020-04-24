@@ -12,7 +12,7 @@ import java.net.URLEncoder;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Network {
+public class Network{
     public void Call(final HashMap<String, String> map, final String urlString) {
         String answer;
         Thread th = new Thread(new Runnable() {

@@ -8,9 +8,18 @@ public class Result {
     public String getName() {
         return email;
     }
+    public void setName(String email){
+        this.email =  email;
+    }
 
-    public String getEmail() {
+    public String getPassword() {
         return password;
     }
+
+    public void setPassword(String password) {
+        this.password= password;
+    }
+
+
 }
 

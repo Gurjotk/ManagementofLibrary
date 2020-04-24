@@ -29,16 +29,15 @@ Button reg;
     private Retrofit retrofit;
     private RetrofitInterface retrofitInterface;
 
-   // private String BASE_URL = "http://192.168.2.20:3033";
+    private String BASE_URL = "http://192.168.2.20:3033";
     private Object HashMap;
     private Object String;
 
-    /// commentline ipconfig run ipaddress
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-        // retrofit = new Retrofit.Builder().baseUrl(BASE_URL).addConverterFactory(GsonConverterFactory.create()).build();
+         retrofit = new Retrofit.Builder().baseUrl(BASE_URL).addConverterFactory(GsonConverterFactory.create()).build();
         retrofitInterface = retrofit.create(RetrofitInterface.class);
         name = findViewById(R.id.reg_name);
         email = findViewById(R.id.reg_user_name);
@@ -51,7 +50,7 @@ Button reg;
                 final HashMap<String, String> map = new HashMap<>();
                 map.put("name", name.getText().toString());
                 map.put("email", email.getText().toString());
-                map.put("password", repass.getText().toString());
+                map.put("password", pass.getText().toString());
                 Thread thread = new Thread(new Runnable() {
                     @Override
                     public void run() {
@@ -59,9 +58,9 @@ Button reg;
                             try {
 
                                 System.out.println("Call");
-                        //        URL url = new URL("http://192.168.2.20:3033/register");
+                             URL url = new URL("http://192.168.2.20:3033/register");
                                 HttpURLConnection client = null;
-                           //     client = (HttpURLConnection) url.openConnection();
+                               client = (HttpURLConnection) url.openConnection();
                                 client.setRequestMethod("POST");
                                 client.setDoInput(true);
                                 client.setDoOutput(true);
