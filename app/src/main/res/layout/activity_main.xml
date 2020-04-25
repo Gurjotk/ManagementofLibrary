@@ -8,21 +8,20 @@
     android:background="#FDFFD1">
 
 
-
-        <EditText
-            android:id="@+id/login_name"
-            android:layout_width="342dp"
-            android:layout_height="45dp"
-            android:layout_gravity="center_horizontal"
-android:background="@drawable/btground"
-            android:hint="EmployeeId"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.243"
-            tools:ignore="MissingConstraints" />
+    <EditText
+        android:id="@+id/login_name"
+        android:layout_width="342dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/btground"
+        android:hint="username"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.243"
+        tools:ignore="MissingConstraints" />
 
         <EditText
             android:id="@+id/login_password"

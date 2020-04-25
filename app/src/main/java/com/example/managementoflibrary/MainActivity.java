@@ -59,9 +59,8 @@ public class MainActivity extends AppCompatActivity {
                             try {
 
                                 System.out.println("Call");
-                                //        URL url = new URL("http://192.168.2.20:3033/register");
+
                                 HttpURLConnection client = null;
-                                //     client = (HttpURLConnection) url.openConnection();
                                 client.setRequestMethod("POST");
                                 client.setDoInput(true);
                                 client.setDoOutput(true);
@@ -96,8 +95,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
                 thread.start();
-               // Intent i = new Intent(MainActivity.this, home.class);
-                //startActivity(i);
+
             }
 
         });
